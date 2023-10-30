@@ -1,0 +1,194 @@
+.carouselContainer {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  background-color: aquamarine;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.carouselItem {
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.carousel__image {
+  display: block;
+  border-radius: 8px;
+  
+}
+
+.controls {
+  position: absolute;
+  right: 0;
+  bottom: 1em;
+  left: 0;
+  
+  text-align: center;
+}
+
+.controlsDot {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  border-radius: 50%;
+  outline: none;
+  background-color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  
+  &:not(:first-child) {
+    margin-left: 0.25em;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+p {
+  line-height: 1.5;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 60em;
+  /* min-height: 90vh; */
+  box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.1);
+  /* padding-bottom: 6em; */
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.messageSection{
+  /* background-color: rgb(68, 14, 14); */
+  border: 2px solid rgb(26, 117, 26);
+  color: #b11c1c;
+  width: 100%;
+  height: 15em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.messageSection .part1{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  text-align: center;
+  color: #fff;
+  background-color: #7c1f1ff5;
+}
+.messageSection .part1 h1{
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  text-align: center;
+  color: #fff;
+}
+.messageSection .part1 p{
+  width: 80%;
+  padding: 10px 5px;
+}
+.messageSection .part2{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: justify;
+  text-align: center;
+  color: #fff;
+  background-color: #7c1f1ff5;
+}
+.messageSection .part2 button{
+  padding: 10px 30px;
+  border:  none;
+  border: 1px solid #fff;
+  box-shadow: rgba(255, 252, 252, 0.966) 0px 2px 5px -1px, rgb(255, 254, 254) 0px 1px 3px -1px;
+  background-color: #7c1f1ff5;
+  margin: 5px 5px;
+  color: #fff;
+}
+.messageSection .part2 button:hover{
+  padding: 10px 30px;
+  border:  none;
+  border: 1px solid #fff;
+  box-shadow: rgba(255, 252, 252, 0.966) 0px 2px 5px -1px, rgb(255, 254, 254) 0px 1px 3px -1px;
+  background-color: #3116aaf5;
+  margin: 5px 5px;
+}
+.featureSection{
+  /* border: 2px solid khaki; */
+  width: 100%;
+  padding: 0px 20px;
+  height: 15em;
+}
+.featureSection .paragraph{
+  padding: 10px 15px;
+  color: #db6415;
+  font-weight: 700;
+}
+.featureSection p{
+  padding: 10px 15px;
+}
+.featureSection hr{
+  color: #b11c1c;
+  width: 100%;
+  background-color: #b11c1c;
+  padding: 1px 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 10em;
+}
+.contact h1{
+  color: #b11c1c;
+  padding: 10px 0px;
+}
+.contact p{
+  padding: 5px 0px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .carousel {
+      background-color: aquamarine; /* Adjust background color */
+  }
+
+  .controlsDot {
+      width: 0.65em; /* Reduce size of control dots */
+      height: 0.65em;
+  }
+
+  .wrapper {
+      max-width: 100%; /* Make content full width on mobile */
+  }
+}
